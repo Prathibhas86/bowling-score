@@ -10,7 +10,7 @@ class ScoreCalculatorBasic {
         else if (idx + 1 < s.length && s[idx + 1] === 'X') {
             throw new Error('No strike possible in the second chance');
         }
-        else if (idx + 1 < s.length && s[idx + 1] === '/') { //[4,/,X]
+        else if (idx + 1 < s.length && s[idx + 1] === '/') {
             if (idx + 2 < s.length && Number.isInteger(s[idx + 2])) {
                 this.scores.push(10 + s[idx + 2]);
                 idx += 2;

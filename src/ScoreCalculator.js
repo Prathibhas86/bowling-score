@@ -5,17 +5,7 @@ class ScoreCalculator {
     score = [];
     idxOfNilStart = -1;
 
-    constructor() {
-
-    }
-
-    calculateScore(s) {  // [4,5] [X] [X] [8,1]
-        // [-1]
-        // [9]
-        //[9,-1]
-        //[9,-1,-1]
-        //[9,28,-1,-1]
-        //[9,28,19,9]
+    calculateScore(s) {
         if (this.currentFrame.length === 0) {
             if (s === '/') {
                 throw new Error('First element cannot be a /');
@@ -49,7 +39,7 @@ class ScoreCalculator {
         }
 
         // Resolve any previously nil scores (stored starting at idxOfNilStart)
-        if (this.idxOfNilStart !== -1) { //[9, -1, -1], [[4,5], [5,/] , [X]
+        if (this.idxOfNilStart !== -1) {
             for (let idx = this.idxOfNilStart; idx < this.score.length; idx++) {
                 const frameCorrespondingToNil = this.frames[idx];
                 if (frameCorrespondingToNil[0] === 'X') {
