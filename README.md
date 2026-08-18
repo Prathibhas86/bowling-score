@@ -8,9 +8,11 @@
 - When input extends to `[4, 5, "X", 8, 1]` → Output: `[9, 19, 9]`.
 
 **Assumption**
+
 The 10th frame rule is out of scope for this implementation. The use case is when the tenth frame ends with a spare or a strike, the implementation returns -1 as the score.
 
 **Tools Used**
+
 Github Co-pilot used to generate test cases and documentation
 
 **Approach A — Brute-force (array-at-once scanner)**
