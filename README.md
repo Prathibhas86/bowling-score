@@ -10,6 +10,9 @@
 **Assumption**
 The 10th frame rule is out of scope for this implementation. The use case is when the tenth frame ends with a spare or a strike, the implementation returns -1 as the score.
 
+**Tools Used**
+Github Co-pilot used to generate test cases and documentation
+
 **Approach A — Brute-force (array-at-once scanner)**
 - **File:** [src/ScoreCalculatorBasic.js](src/ScoreCalculatorBasic.js)
 - **Idea:** Accept the entire array of rolls for a snapshot and scan it left-to-right building frame scores using lookahead logic. For each frame, examine the next one or two rolls to determine whether the frame can be scored now or should be marked unresolved (`-1`).
