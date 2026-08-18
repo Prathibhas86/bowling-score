@@ -67,10 +67,7 @@
 
 **Improvements & next steps**
 - Add input validation and a clear error model (throw vs return error code).
-- Extract a small parser to normalize input (map `X` and `/` consistently, validate numeric ranges).
 - Consider converting to TypeScript for stronger typing of roll/frame types.
-- Add a `getRunningTotals()` helper if the UI wants cumulative totals per frame.
-- Add benchmarks if the system must support scoring many players concurrently.
 
 **References**
 - Implementations: [src/ScoreCalculator.js](src/ScoreCalculator.js), [src/ScoreCalculatorBasic.js](src/ScoreCalculatorBasic.js)
